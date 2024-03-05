@@ -7,13 +7,35 @@ environment:
   sdk: '>=3.1.0 <4.0.0'
 
 dependencies:
+  flutter:
+    sdk: flutter
   http:
   meta: ^1.3.0
   json_annotation: ^4.0.0
+  plugin_platform_interface:
 
 dev_dependencies:
-  test: ^1.16.0
-  pedantic: ^1.10.0
+  test:
+  pedantic:
   build_runner:
-  json_serializable: ^4.0.0
-  coverage: ^1.0.0
+  json_serializable:
+  coverage:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.example.google_maps_webservice
+        pluginClass: GoogleMapsWebservicePlugin
+      ios:
+        pluginClass: GoogleMapsWebservicePlugin
+      web:
+        default_package: google_maps_webservice
+      macos:
+        default_package: google_maps_webservice
+      windows:
+        default_package: google_maps_webservice
+      linux:
+        default_package: google_maps_webservice
